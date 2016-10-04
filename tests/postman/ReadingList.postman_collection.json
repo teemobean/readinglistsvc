@@ -1,0 +1,450 @@
+{
+	"variables": [],
+	"info": {
+		"name": "ReadingList",
+		"_postman_id": "2d5a4f85-b93c-0b7f-6723-472e29da959f",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET /lists",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": "tests[\"Status code is 200\"] = responseCode.code === 200;"
+					}
+				}
+			],
+			"request": {
+				"url": "https://test-snorlax-01.azurewebsites.net/api/lists",
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-functions-key",
+						"value": "bhdzvqkvoi5z7544fpzzprr12gczee6ss",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"description": "GET /lists"
+			},
+			"response": [
+				{
+					"name": "test",
+					"originalRequest": {
+						"url": "https://test-snorlax-01.azurewebsites.net/api/lists",
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-functions-key",
+								"value": "bhdzvqkvoi5z7544fpzzprr12gczee6ss",
+								"enabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"_postman_previewtype": "html",
+					"header": [
+						{
+							"name": "Cache-Control",
+							"key": "Cache-Control",
+							"value": "no-cache",
+							"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+						},
+						{
+							"name": "Content-Encoding",
+							"key": "Content-Encoding",
+							"value": "gzip",
+							"description": "The type of encoding used on the data."
+						},
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "text/plain; charset=utf-8",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Sun, 02 Oct 2016 02:41:24 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "Expires",
+							"key": "Expires",
+							"value": "-1",
+							"description": "Gives the date/time after which the response is considered stale"
+						},
+						{
+							"name": "Pragma",
+							"key": "Pragma",
+							"value": "no-cache",
+							"description": "Implementation-specific headers that may have various effects anywhere along the request-response chain."
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "Microsoft-IIS/8.0",
+							"description": "A name for the server"
+						},
+						{
+							"name": "Transfer-Encoding",
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"name": "Vary",
+							"key": "Vary",
+							"value": "Accept-Encoding",
+							"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+						},
+						{
+							"name": "X-AspNet-Version",
+							"key": "X-AspNet-Version",
+							"value": "4.0.30319",
+							"description": "Custom header"
+						},
+						{
+							"name": "X-Powered-By",
+							"key": "X-Powered-By",
+							"value": "ASP.NET",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookie": [
+						{
+							"expires": "Invalid Date",
+							"hostOnly": false,
+							"httpOnly": false,
+							"domain": ".test-snorlax-01.azurewebsites.net",
+							"path": "/",
+							"secure": false,
+							"session": true,
+							"value": "2f3c8622eee9f3fdd7d7c4a97bc66ff31cfeff6872aabb66f1aef8110ec49eed"
+						}
+					],
+					"responseTime": 22293,
+					"body": "Hello (GET collection)"
+				},
+				{
+					"name": "test",
+					"originalRequest": {
+						"url": "https://test-snorlax-01.azurewebsites.net/api/lists",
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-functions-key",
+								"value": "bhdzvqkvoi5z7544fpzzprr12gczee6ss",
+								"enabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"_postman_previewtype": "html",
+					"header": [
+						{
+							"name": "Cache-Control",
+							"key": "Cache-Control",
+							"value": "no-cache",
+							"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+						},
+						{
+							"name": "Content-Encoding",
+							"key": "Content-Encoding",
+							"value": "gzip",
+							"description": "The type of encoding used on the data."
+						},
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "text/plain; charset=utf-8",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Sun, 02 Oct 2016 02:41:24 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "Expires",
+							"key": "Expires",
+							"value": "-1",
+							"description": "Gives the date/time after which the response is considered stale"
+						},
+						{
+							"name": "Pragma",
+							"key": "Pragma",
+							"value": "no-cache",
+							"description": "Implementation-specific headers that may have various effects anywhere along the request-response chain."
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "Microsoft-IIS/8.0",
+							"description": "A name for the server"
+						},
+						{
+							"name": "Transfer-Encoding",
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"name": "Vary",
+							"key": "Vary",
+							"value": "Accept-Encoding",
+							"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+						},
+						{
+							"name": "X-AspNet-Version",
+							"key": "X-AspNet-Version",
+							"value": "4.0.30319",
+							"description": "Custom header"
+						},
+						{
+							"name": "X-Powered-By",
+							"key": "X-Powered-By",
+							"value": "ASP.NET",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookie": [
+						{
+							"expires": "Invalid Date",
+							"hostOnly": false,
+							"httpOnly": false,
+							"domain": ".test-snorlax-01.azurewebsites.net",
+							"path": "/",
+							"secure": false,
+							"session": true,
+							"value": "2f3c8622eee9f3fdd7d7c4a97bc66ff31cfeff6872aabb66f1aef8110ec49eed"
+						}
+					],
+					"responseTime": 22293,
+					"body": "Hello (GET collection)"
+				},
+				{
+					"name": "test",
+					"originalRequest": {
+						"url": "https://test-snorlax-01.azurewebsites.net/api/lists",
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-functions-key",
+								"value": "bhdzvqkvoi5z7544fpzzprr12gczee6ss",
+								"enabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"_postman_previewtype": "html",
+					"header": [
+						{
+							"name": "Cache-Control",
+							"key": "Cache-Control",
+							"value": "no-cache",
+							"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+						},
+						{
+							"name": "Content-Encoding",
+							"key": "Content-Encoding",
+							"value": "gzip",
+							"description": "The type of encoding used on the data."
+						},
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "text/plain; charset=utf-8",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Sun, 02 Oct 2016 02:41:24 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "Expires",
+							"key": "Expires",
+							"value": "-1",
+							"description": "Gives the date/time after which the response is considered stale"
+						},
+						{
+							"name": "Pragma",
+							"key": "Pragma",
+							"value": "no-cache",
+							"description": "Implementation-specific headers that may have various effects anywhere along the request-response chain."
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "Microsoft-IIS/8.0",
+							"description": "A name for the server"
+						},
+						{
+							"name": "Transfer-Encoding",
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"name": "Vary",
+							"key": "Vary",
+							"value": "Accept-Encoding",
+							"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+						},
+						{
+							"name": "X-AspNet-Version",
+							"key": "X-AspNet-Version",
+							"value": "4.0.30319",
+							"description": "Custom header"
+						},
+						{
+							"name": "X-Powered-By",
+							"key": "X-Powered-By",
+							"value": "ASP.NET",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookie": [
+						{
+							"expires": "Invalid Date",
+							"hostOnly": false,
+							"httpOnly": false,
+							"domain": ".test-snorlax-01.azurewebsites.net",
+							"path": "/",
+							"secure": false,
+							"session": true,
+							"value": "2f3c8622eee9f3fdd7d7c4a97bc66ff31cfeff6872aabb66f1aef8110ec49eed"
+						}
+					],
+					"responseTime": 22293,
+					"body": "Hello (GET collection)"
+				}
+			]
+		},
+		{
+			"name": "GET /users",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": "tests[\"Status code is 200\"] = responseCode.code === 200;"
+					}
+				}
+			],
+			"request": {
+				"url": "https://test-snorlax-01.azurewebsites.net/api/users",
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-functions-key",
+						"value": "siMUi4zmJihg3DVXEWNaMrd9WTinzkgSkNjTOiMUdtcjmGGagfuXJA==",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"description": "GET /users"
+			},
+			"response": []
+		},
+		{
+			"name": "POST /lists",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": "tests[\"Status code is 200\"] = responseCode.code === 200;"
+					}
+				}
+			],
+			"request": {
+				"url": "https://test-snorlax-01.azurewebsites.net/api/lists",
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-functions-key",
+						"value": "bhdzvqkvoi5z7544fpzzprr12gczee6ss",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\" : \"Hello\",\n    \"imageUri\" : \"http\",\n    \"description\" : \"Hello Description\"\n}"
+				},
+				"description": "POST /lists"
+			},
+			"response": []
+		},
+		{
+			"name": "POST /readingElements",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": "tests[\"Status code is 200\"] = responseCode.code === 200;"
+					}
+				}
+			],
+			"request": {
+				"url": "https://test-snorlax-01.azurewebsites.net/api/readingElements",
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-functions-key",
+						"value": "jiod4zeumslayn9pyw8x305mu0bfnxies",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\" : \"Hello\",\n    \"imageUri\" : \"http\",\n    \"description\" : \"Hello Description\"\n}"
+				},
+				"description": "POST /readingElements"
+			},
+			"response": []
+		}
+	]
+}
