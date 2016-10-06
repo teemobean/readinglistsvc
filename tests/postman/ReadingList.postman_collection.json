@@ -445,6 +445,40 @@
 				"description": "POST /readingElements"
 			},
 			"response": []
+		},
+		{
+			"name": "POST /lists with error",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": "tests[\"Status code is 400\"] = responseCode.code === 400;"
+					}
+				}
+			],
+			"request": {
+				"url": "https://test-snorlax-01.azurewebsites.net/api/lists",
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-functions-key",
+						"value": "bhdzvqkvoi5z7544fpzzprr12gczee6ss",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\" : \"Hello\",\n    \"imageUri\" : \"http\"\n}"
+				},
+				"description": "POST /lists"
+			},
+			"response": []
 		}
 	]
 }
