@@ -1,5 +1,6 @@
 var SchemaList = require("../schemas/list.js");
 var Api = require("../common/api.js");
+var Errors = require("../common/errors.js");
 
 // This is the main driver function
 // In theory, no updates needed here - customize with the specific functions
@@ -40,9 +41,6 @@ function Post(context, req)
         };
     }
     else {
-        return {
-            status : 400,
-            body : "Invalid request"
-        }
+        return Errors.invalidRequest();
     }
 }
