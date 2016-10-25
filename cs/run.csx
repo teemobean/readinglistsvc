@@ -1,4 +1,4 @@
-#load "../common/api.csx"
+#load "..\common\api.csx"
 
 using System.Net;
 using System.Threading.Tasks;
