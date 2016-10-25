@@ -8,8 +8,8 @@ public static async Task<HttpResponseMessage> Api(
     Func<HttpRequestMessage, HttpResponseMessage> getCollectionHandler,
     Func<HttpRequestMessage, dynamic, HttpResponseMessage> postHandler)
 {
-    log.Info($"Incoming {req.HttpMethod.ToString()} {req.RequestUri}");
-    
+    log.Info($"Incoming {req.Method.ToString()} {req.RequestUri}");
+
     if (req.Method == HttpMethod.Post)
     {
         dynamic data = await req.Content.ReadAsAsync<object>();
