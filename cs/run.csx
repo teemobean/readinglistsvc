@@ -1,23 +1,31 @@
+#load "../common/api.csx"
+
 using System.Net;
 using System.Threading.Tasks;
 
+static HttpResponseMessage PostFunc(HttpRequestMessage req, dynamic data)
+{
+    return req.CreateResponse(HttpStatusCode.OK, "POST ${data?.name}");
+}
+
+static HttpResponseMessage GetFunc(HttpRequestMessage req, string id)
+{
+    return req.CreateResponse(HttpStatusCode.OK, "Hello ${id}");
+}
+
+static HttpResponseMessage GetCollectionFunc(HttpRequestMessage req)
+{
+    return req.CreateResponse(HttpStatusCode.OK, "Hello");
+}
+
+
 public static async Task<HttpResponseMessage> Run(HttpRequestMessage req, TraceWriter log)
 {
-    log.Info($"C# HTTP trigger function processed a request. RequestUri={req.RequestUri}");
-    log.Info(req.Method);
-
-    // parse query parameter
-    string name = req.GetQueryNameValuePairs()
-        .FirstOrDefault(q => string.Compare(q.Key, "name", true) == 0)
-        .Value;
-
-    // Get request body
-    dynamic data = await req.Content.ReadAsAsync<object>();
-
-    // Set name to query string or body data
-    name = name ?? data?.name;
-
-    return name == null
-        ? req.CreateResponse(HttpStatusCode.BadRequest, "Please pass a name on the query string or in the request body")
-        : req.CreateResponse(HttpStatusCode.OK, "Hello " + name);
+    return Api(
+        req,
+        log,
+        GetFunc,
+        GetCollectionFunc,
+        PostFunc
+        );
 }
