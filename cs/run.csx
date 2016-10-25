@@ -21,7 +21,7 @@ static HttpResponseMessage GetCollectionFunc(HttpRequestMessage req)
 
 public static async Task<HttpResponseMessage> Run(HttpRequestMessage req, TraceWriter log)
 {
-    return Api(
+    return await Api(
         req,
         log,
         GetFunc,
