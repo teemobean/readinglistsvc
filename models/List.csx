@@ -11,9 +11,9 @@ public class ListRequest
 
     public static ListRequest CreateListRequest(dynamic o)
     {
-        if (String.IsNullOrEmpty(o.name) ||
-            String.IsNullOrEmpty(o.imageUri) ||
-            String.IsNullOrEmpty(o.description)
+        if (String.IsNullOrEmpty((string)(o?.name ?? "")) ||
+            String.IsNullOrEmpty((string)(o?.imageUri ?? "")) ||
+            String.IsNullOrEmpty((string)(o?.description ?? ""))
             )
         {
             return null;
