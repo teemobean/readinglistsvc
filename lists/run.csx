@@ -13,7 +13,7 @@ static HttpResponseMessage PostFunc(HttpRequestMessage req, dynamic data)
         return Errors.BadRequest(req);
     }
 
-    return req.CreateResponse(HttpStatusCode.OK, $"POST {body.name}");
+    return req.CreateResponse(HttpStatusCode.OK, $"POST {body.Name}");
 }
 
 static HttpResponseMessage GetFunc(HttpRequestMessage req, string id)
