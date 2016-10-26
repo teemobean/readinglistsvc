@@ -1,3 +1,5 @@
+#load "errors.csx"
+
 using System.Net;
 using System.Threading.Tasks;
 
@@ -33,6 +35,6 @@ public static async Task<HttpResponseMessage> Api(
     }
     else
     {
-        return req.CreateResponse(HttpStatusCode.BadRequest, "Unknown operation");
+        return Errors.HttpMethodNotSupported();
     }
 }
