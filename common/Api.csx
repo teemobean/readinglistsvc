@@ -1,4 +1,4 @@
-#load "errors.csx"
+#load "Errors.csx"
 
 using System.Net;
 using System.Threading.Tasks;
