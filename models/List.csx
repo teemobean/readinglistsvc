@@ -9,7 +9,7 @@ public class ListRequest
         this.backingObject = o;
     }
 
-    public static ListRequest CreateListRequest(dynamic o)
+    public static ListRequest Create(dynamic o)
     {
         if (String.IsNullOrEmpty((string)o?.name) ||
             String.IsNullOrEmpty((string)o?.imageUri) ||
@@ -56,7 +56,7 @@ public class ListResource
         this.backingObject = o;
     }
 
-    public static ListResource CreateListResource(dynamic o)
+    public static ListResource Create(dynamic o)
     {
         if (!ResourceBase.DynamicObjectIsValid(o) ||
             String.IsNullOrEmpty((string)o?.name) ||

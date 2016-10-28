@@ -9,7 +9,7 @@ public class ReadingElementRequest
         this.backingObject = o;
     }
 
-    public static ReadingElementRequest CreateReadingElementRequest(dynamic o)
+    public static ReadingElementRequest Create(dynamic o)
     {
         return new ReadingElementRequest(o);
     }
@@ -24,7 +24,7 @@ public class ReadingElementResource
         this.backingObject = o;
     }
 
-    public static ReadingElementResource CreateReadingElementResource(dynamic o)
+    public static ReadingElementResource Create(dynamic o)
     {
         if (!ResourceBase.DynamicObjectIsValid(o)
             )

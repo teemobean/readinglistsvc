@@ -10,7 +10,7 @@ using System.Configuration;
 
 static HttpResponseMessage PostFunc(HttpRequestMessage req, dynamic data)
 {
-    var body = ListRequest.CreateListRequest(data);
+    var body = ListRequest.Create(data);
     if (body == null)
     {
         return Errors.BadRequest(req);

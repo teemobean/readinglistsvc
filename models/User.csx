@@ -9,7 +9,7 @@ public class UserRequest
         this.backingObject = o;
     }
 
-    public static UserRequest CreateUserRequest(dynamic o)
+    public static UserRequest Create(dynamic o)
     {
         return new UserRequest(o);
     }
@@ -24,7 +24,7 @@ public class UserResource
         this.backingObject = o;
     }
 
-    public static UserResource CreateUserResource(dynamic o)
+    public static UserResource Create(dynamic o)
     {
         if (!ResourceBase.DynamicObjectIsValid(o)
             )
