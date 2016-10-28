@@ -1,4 +1,4 @@
-
+#load "ResourceBase.csx"
 
 public class ListRequest
 {
@@ -45,4 +45,28 @@ public class ListRequest
         }
     }
 
+}
+
+public class ListResource
+{
+    private dynamic backingObject = null;
+
+    private ListResource(dynamic o)
+    {
+        self.backingObject = o;
+    }
+
+    public static ListResource CreateListResource(dynamic o)
+    {
+        if (!ResourceBase.DynamicObjectIsValid(o) ||
+            String.IsNullOrEmpty((string)o?.name) ||
+            String.IsNullOrEmpty((string)o?.imageUri) ||
+            String.IsNullOrEmpty((string)o?.description)
+            )
+        {
+            return null;
+        }
+        
+        return new ListResource(o);        
+    }    
 }
