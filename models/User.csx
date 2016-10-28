@@ -21,7 +21,7 @@ public class UserResource
 
     private UserResource(dynamic o)
     {
-        self.backingObject = o;
+        this.backingObject = o;
     }
 
     public static UserResource CreateUserResource(dynamic o)

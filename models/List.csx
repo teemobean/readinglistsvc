@@ -53,7 +53,7 @@ public class ListResource
 
     private ListResource(dynamic o)
     {
-        self.backingObject = o;
+        this.backingObject = o;
     }
 
     public static ListResource CreateListResource(dynamic o)
