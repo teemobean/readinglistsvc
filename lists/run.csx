@@ -4,6 +4,9 @@
 
 using System.Net;
 using System.Threading.Tasks;
+using Dapper;
+using System.Data.SqlClient;
+using System.Configuration;
 
 static HttpResponseMessage PostFunc(HttpRequestMessage req, dynamic data)
 {
