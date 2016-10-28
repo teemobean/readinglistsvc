@@ -1,4 +1,4 @@
-#load "errors.csx"
+#load "Errors.csx"
 
 using System.Net;
 using System.Threading.Tasks;
@@ -35,6 +35,6 @@ public static async Task<HttpResponseMessage> Api(
     }
     else
     {
-        return Errors.HttpMethodNotSupported();
+        return Errors.HttpMethodNotSupported(req);
     }
 }
