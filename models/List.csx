@@ -49,11 +49,15 @@ public class ListRequest
 
 public class ListResource
 {
-    private dynamic backingObject = null;
+    public string Id { get; }
+    public string Title { get; set; }
+    public string Description { get; set; }
+    public string ImageUri { get; set; }
+    public string State { get; set; }
+    public bool IsPublic { get; set; }
 
     private ListResource(dynamic o)
     {
-        this.backingObject = o;
     }
 
     public static ListResource Create(dynamic o)

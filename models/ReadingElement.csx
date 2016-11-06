@@ -17,11 +17,15 @@ public class ReadingElementRequest
 
 public class ReadingElementResource
 {
-    private dynamic backingObject = null;
+    public string Id { get; }
+    public string Title { get; set; }
+    public string Description { get; set; }
+    public string Type { get; set; }
+    public string ImageUri { get; set; }
+    public dynamic Data { get; set; }
 
     private ReadingElementResource(dynamic o)
     {
-        this.backingObject = o;
     }
 
     public static ReadingElementResource Create(dynamic o)
@@ -29,7 +33,7 @@ public class ReadingElementResource
         if (!ResourceBase.DynamicObjectIsValid(o)
             )
         {
-            return null;
+            throw new DynamicObjectInvalidException();
         }
         
         return new ReadingElementResource(o);        
