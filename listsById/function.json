@@ -1,0 +1,18 @@
+{
+  "disabled" : false,
+  "bindings" : [
+    {
+      "authLevel" : "function",
+      "type" : "httpTrigger",
+      "direction" : "in",
+      "methods" : [ "get", "delete", "put" ],
+      "route" : "users/{userId}/lists/{listId}",
+      "name" : "req"
+    },
+    {
+      "type" : "http",
+      "direction" : "out",
+      "name" : "res"
+    }
+  ]
+}
