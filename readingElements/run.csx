@@ -1,6 +1,6 @@
 #load "..\common\Api.csx"
 #load "..\common\Errors.csx"
-#load "..\models\List.csx"
+#load "..\models\ReadingElement.csx"
 
 using System.Net;
 using System.Threading.Tasks;
@@ -10,13 +10,13 @@ using System.Configuration;
 
 static HttpResponseMessage PostFunc(HttpRequestMessage req, dynamic data)
 {
-    var body = ListRequest.Create(data);
+    var body = ReadingElementRequest.Create(data);
     if (body == null)
     {
         return Errors.BadRequest(req);
     }
 
-    return req.CreateResponse(HttpStatusCode.OK, $"POST {body.Name}");
+    return req.CreateResponse(HttpStatusCode.OK, $"POST");
 }
 
 static HttpResponseMessage GetFunc(HttpRequestMessage req)
