@@ -37,7 +37,7 @@
 			"response": []
 		},
 		{
-			"name": "GET /user/{userId}/lists/{listId}",
+			"name": "GET /users/{userId}/lists/{listId}",
 			"event": [
 				{
 					"listen": "test",
@@ -48,12 +48,12 @@
 				}
 			],
 			"request": {
-				"url": "https://test-snorlax-01.azurewebsites.net/api/lists",
+				"url": "https://test-snorlax-01.azurewebsites.net/api/users/abc/lists/xyz",
 				"method": "GET",
 				"header": [
 					{
 						"key": "x-functions-key",
-						"value": "bhdzvqkvoi5z7544fpzzprr12gczee6ss",
+						"value": "4EbdhoGMiAzvhzYEglUTfuVNbjew8/qZQls8GC/BZVH5kqGBkMePaQ==",
 						"description": ""
 					}
 				],
@@ -61,7 +61,7 @@
 					"mode": "formdata",
 					"formdata": []
 				},
-				"description": "GET /lists"
+				"description": "GET /users/{userId}/lists/{listId}"
 			},
 			"response": []
 		},
