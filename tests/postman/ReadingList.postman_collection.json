@@ -8,6 +8,64 @@
 	},
 	"item": [
 		{
+			"name": "GET /users",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": "tests[\"Status code is 200\"] = responseCode.code === 200;"
+					}
+				}
+			],
+			"request": {
+				"url": "https://test-snorlax-01.azurewebsites.net/api/users",
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-functions-key",
+						"value": "siMUi4zmJihg3DVXEWNaMrd9WTinzkgSkNjTOiMUdtcjmGGagfuXJA==",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"description": "GET /users"
+			},
+			"response": []
+		},
+		{
+			"name": "GET /user/{userId}/lists/{listId}",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": "tests[\"Status code is 200\"] = responseCode.code === 200;"
+					}
+				}
+			],
+			"request": {
+				"url": "https://test-snorlax-01.azurewebsites.net/api/lists",
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-functions-key",
+						"value": "bhdzvqkvoi5z7544fpzzprr12gczee6ss",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"description": "GET /lists"
+			},
+			"response": []
+		},
+		{
 			"name": "GET /lists",
 			"event": [
 				{
@@ -348,35 +406,6 @@
 					"body": "Hello (GET collection)"
 				}
 			]
-		},
-		{
-			"name": "GET /users",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"type": "text/javascript",
-						"exec": "tests[\"Status code is 200\"] = responseCode.code === 200;"
-					}
-				}
-			],
-			"request": {
-				"url": "https://test-snorlax-01.azurewebsites.net/api/users",
-				"method": "GET",
-				"header": [
-					{
-						"key": "x-functions-key",
-						"value": "siMUi4zmJihg3DVXEWNaMrd9WTinzkgSkNjTOiMUdtcjmGGagfuXJA==",
-						"description": ""
-					}
-				],
-				"body": {
-					"mode": "formdata",
-					"formdata": []
-				},
-				"description": "GET /users"
-			},
-			"response": []
 		},
 		{
 			"name": "POST /lists",
