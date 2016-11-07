@@ -19,23 +19,17 @@ static HttpResponseMessage PostFunc(HttpRequestMessage req, dynamic data)
     return req.CreateResponse(HttpStatusCode.OK, $"POST");
 }
 
-static HttpResponseMessage GetFunc(HttpRequestMessage req, string id)
-{
-    return req.CreateResponse(HttpStatusCode.OK, $"Hello {id}");
-}
-
-static HttpResponseMessage GetCollectionFunc(HttpRequestMessage req)
+static HttpResponseMessage GetFunc(HttpRequestMessage req)
 {
     return req.CreateResponse(HttpStatusCode.OK, "Hello");
 }
 
 public static async Task<HttpResponseMessage> Run(HttpRequestMessage req, TraceWriter log)
 {
-    return await Api(
+    return await Api.Collection(
         req,
         log,
         GetFunc,
-        GetCollectionFunc,
         PostFunc
         );
 }

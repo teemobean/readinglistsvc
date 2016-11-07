@@ -3,38 +3,28 @@
 using System.Net;
 using System.Threading.Tasks;
 
-public static async Task<HttpResponseMessage> Api(
-    HttpRequestMessage req,
-    TraceWriter log,
-    Func<HttpRequestMessage, string, HttpResponseMessage> getHandler,
-    Func<HttpRequestMessage, HttpResponseMessage> getCollectionHandler,
-    Func<HttpRequestMessage, dynamic, HttpResponseMessage> postHandler)
+public class Api
 {
-    log.Info($"Incoming {req.Method.ToString()} {req.RequestUri}");
-
-    if (req.Method == HttpMethod.Post)
+    public static async Task<HttpResponseMessage> Collection(
+        HttpRequestMessage req,
+        TraceWriter log,
+        Func<HttpRequestMessage, HttpResponseMessage> getHandler,
+        Func<HttpRequestMessage, dynamic, HttpResponseMessage> postHandler)
     {
-        dynamic data = await req.Content.ReadAsAsync<object>();
-        return postHandler(req, data);
-    }
-    else if (req.Method == HttpMethod.Get)
-    {
-        // Determine whether this is a single GET or a collection GET
-        var id = req.GetQueryNameValuePairs()
-            .FirstOrDefault(q => string.Compare(q.Key, "id", true) == 0)
-            .Value;
+        log.Info($"Incoming {req.Method.ToString()} {req.RequestUri}");
 
-        if (id != null)
+        if (req.Method == HttpMethod.Post)
         {
-            return getHandler(req, id);
+            dynamic data = await req.Content.ReadAsAsync<object>();
+            return postHandler(req, data);
+        }
+        else if (req.Method == HttpMethod.Get)
+        {
+            return getHandler(req);
         }
         else
         {
-            return getCollectionHandler(req);
+            return Errors.HttpMethodNotSupported(req);
         }
-    }
-    else
-    {
-        return Errors.HttpMethodNotSupported(req);
     }
 }
