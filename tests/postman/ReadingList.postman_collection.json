@@ -479,6 +479,40 @@
 				"description": "POST /lists"
 			},
 			"response": []
+		},
+		{
+			"name": "POST followedLists",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": "tests[\"Status code is 400\"] = responseCode.code === 400;"
+					}
+				}
+			],
+			"request": {
+				"url": "https://reading-list-functions.azurewebsites.net/api/followedLists",
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-functions-key",
+						"value": "n4ATJvbOtghwItoNEohCFm/qnBDdmDE0Btmr9TaCTWajpaiJ0s1X4Q==",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\" : \"Hello\",\n    \"imageUri\" : \"http\"\n}"
+				},
+				"description": "POST /followedLists"
+			},
+			"response": []
 		}
 	]
 }

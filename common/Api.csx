@@ -9,7 +9,8 @@ public class Api
         HttpRequestMessage req,
         TraceWriter log,
         Func<HttpRequestMessage, HttpResponseMessage> getHandler,
-        Func<HttpRequestMessage, dynamic, HttpResponseMessage> postHandler)
+        Func<HttpRequestMessage, dynamic, HttpResponseMessage> postHandler,
+        Func<HttpRequestMessage, dynamic, HttpResponseMessage> deleteHandler = null)
     {
         log.Info($"Incoming {req.Method.ToString()} {req.RequestUri}");
 
@@ -22,9 +23,11 @@ public class Api
         {
             return getHandler(req);
         }
-        else
+        else if (req.Method == HttpMethod.Delete && deleteHandler != null)
         {
-            return Errors.HttpMethodNotSupported(req);
+            return deleteHandler;
         }
+
+        return Errors.HttpMethodNotSupported(req);
     }
 }
