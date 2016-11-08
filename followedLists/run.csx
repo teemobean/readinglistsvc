@@ -29,19 +29,6 @@ static HttpResponseMessage GetFunc(HttpRequestMessage req)
     return req.CreateResponse(HttpStatusCode.OK, body);
 }
 
-// DELETE api/v1/users/{userId}/followedLists/{followedListId}
-static HttpResponseMessage DeleteFunc(HttpRequestMessage req, dynamic data)
-{
-    // TODO: How do we translate path variable into data?
-    var succeeded = FollowedListRequest.Delete(data);
-    if (!succeeded)
-    {
-        return Errors.BadRequest(req);
-    }
-
-    return req.CreateResponse(HttpStatusCode.OK, "DELETE FollowedLists");
-}
-
 public static async Task<HttpResponseMessage> Run(HttpRequestMessage req, TraceWriter log)
 {
     return await Api.Collection(
