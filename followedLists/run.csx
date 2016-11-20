@@ -25,8 +25,7 @@ static HttpResponseMessage GetFunc(HttpRequestMessage req)
 {
     // TODO: 
     // Given the parameter {userId}, get their lists.
-    var body = FollowedListRequest.Get("testUser");
-    return req.CreateResponse(HttpStatusCode.OK, body);
+    return req.CreateResponse(HttpStatusCode.OK, "Hello");
 }
 
 public static async Task<HttpResponseMessage> Run(HttpRequestMessage req, TraceWriter log)
@@ -35,7 +34,6 @@ public static async Task<HttpResponseMessage> Run(HttpRequestMessage req, TraceW
         req,
         log,
         GetFunc,
-        PostFunc,
-        DeleteFunc
+        PostFunc
         );
 }
