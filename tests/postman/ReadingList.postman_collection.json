@@ -2,7 +2,7 @@
 	"variables": [],
 	"info": {
 		"name": "ReadingList",
-		"_postman_id": "2d5a4f85-b93c-0b7f-6723-472e29da959f",
+		"_postman_id": "5a2e8965-38df-865b-73ee-4fa841443ac3",
 		"description": "",
 		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
 	},
@@ -102,7 +102,7 @@
 							{
 								"key": "x-functions-key",
 								"value": "bhdzvqkvoi5z7544fpzzprr12gczee6ss",
-								"enabled": true
+								"description": ""
 							}
 						],
 						"body": {
@@ -206,7 +206,7 @@
 							{
 								"key": "x-functions-key",
 								"value": "bhdzvqkvoi5z7544fpzzprr12gczee6ss",
-								"enabled": true
+								"description": ""
 							}
 						],
 						"body": {
@@ -310,7 +310,7 @@
 							{
 								"key": "x-functions-key",
 								"value": "bhdzvqkvoi5z7544fpzzprr12gczee6ss",
-								"enabled": true
+								"description": ""
 							}
 						],
 						"body": {
@@ -510,7 +510,7 @@
 			"response": []
 		},
 		{
-			"name": "POST followedLists",
+			"name": "POST /followedLists with error",
 			"event": [
 				{
 					"listen": "test",
@@ -521,12 +521,12 @@
 				}
 			],
 			"request": {
-				"url": "https://reading-list-functions.azurewebsites.net/api/followedLists",
+				"url": "https://test-snorlax-01.azurewebsites.net/api/followedLists",
 				"method": "POST",
 				"header": [
 					{
 						"key": "x-functions-key",
-						"value": "n4ATJvbOtghwItoNEohCFm/qnBDdmDE0Btmr9TaCTWajpaiJ0s1X4Q==",
+						"value": "3eezUYHtyKZgvMZUa0iROZX3b8M8MbJPLZ/lzWxmrIz6i1Jzhu0/gQ==",
 						"description": ""
 					},
 					{
