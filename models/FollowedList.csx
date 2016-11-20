@@ -9,7 +9,7 @@ public class FollowedListRequest
         this.backingObject = o;
     }
 
-    public static FollowedListResource Create(dynamic d)
+    public static FollowedListRequest Create(dynamic d)
     {
         if (String.IsNullOrEmpty((string)d?.Id) ||
             String.IsNullOrEmpty((string)d?.OwnerId) ||
@@ -65,6 +65,6 @@ public class FollowedListResource
             return null;
         }
 
-        return new FollowedListResource(o);
+        return new FollowedListResource(d);
     }
 }
