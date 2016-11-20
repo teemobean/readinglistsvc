@@ -1,6 +1,6 @@
 #load "..\common\Api.csx"
 #load "..\common\Errors.csx"
-#load "..\models\ReadingElement.csx"
+#load "..\models\FollowedList.csx"
 
 using System.Net;
 using System.Threading.Tasks;
