@@ -1,7 +1,4 @@
 {
-  "buildOptions": {
-    "compile": [".cs", ".csx"]
-  },
   "frameworks": {
     "net46":{
       "dependencies": {
